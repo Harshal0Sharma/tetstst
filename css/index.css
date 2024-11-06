@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: red;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.landing {
+    text-align: center;
+    display: none;
+    /* Hidden by default */
+}

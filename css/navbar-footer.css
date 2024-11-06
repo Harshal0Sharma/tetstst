@@ -1,0 +1,60 @@
+/* navbar-footer.css */
+
+/* Navbar Styles */
+nav {
+    background-color: #301934;
+    /* Change this color as needed */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    /* Center the navbar items */
+}
+
+nav ul li {
+    margin: 0 15px;
+    /* Spacing between navbar items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    /* White text color */
+    font-size: 18px;
+    /* Font size for navbar items */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: #e91e63;
+    /* Change this color for hover effect */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #301934;
+    /* Same color as navbar */
+    color: #ffffff;
+    /* White text color */
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    /* Ensures the footer stays at the bottom */
+    bottom: 0;
+    /* Aligns footer to the bottom */
+    width: 100%;
+    /* Full width */
+}
+
+footer p {
+    margin: 0;
+    /* Removes default margin */
+    font-size: 14px;
+    /* Font size for footer text */
+}

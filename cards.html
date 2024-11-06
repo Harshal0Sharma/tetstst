@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Designs</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .card {
+            width: 300px;
+            height: 200px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Select Your Card Design</h1>
+    <div id="card-container"></div>
+
+    <script>
+        // Get the card information from local storage
+        const cardInfo = JSON.parse(localStorage.getItem('cardInfo'));
+
+        // Display the card design
+        if (cardInfo) {
+            const cardContainer = document.getElementById('card-container');
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.style.backgroundColor = cardInfo.color;
+            card.innerHTML = `<h2>${cardInfo.name}</h2><p>${cardInfo.jobTitle}</p>`;
+            cardContainer.appendChild(card);
+
+            // Button to edit the card
+            const editButton = document.createElement('button');
+            editButton.textContent = 'Edit Card';
+            editButton.addEventListener('click', () => {
+                window.location.href = 'edit.html'; // Redirect to edit page
+            });
+            cardContainer.appendChild(editButton);
+        }
+    </script>
+</body>
+
+</html>
