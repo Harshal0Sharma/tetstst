@@ -29,6 +29,8 @@ function showLandingPage() {
 
 setTimeout(showLandingPage, 3000); // Adjust loading time as needed
 
-document.getElementById("generate-button").addEventListener("click", () => {
-  window.location.href = "generator.html"; // Navigate to the generator page
-});
+document
+  .getElementById("generate-button")
+  .addEventListener("click", function () {
+    window.location.href = "/generator"; // Navigate without .html
+  });

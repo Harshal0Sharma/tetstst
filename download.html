@@ -7,36 +7,7 @@
     <title>Download Card</title>
     <link rel="stylesheet" href="styles.css">
     <script src="js/redirect.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
 
-        h1 {
-            text-align: center;
-        }
-
-        .card {
-            width: 300px;
-            height: 200px;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
-        }
-
-        button {
-            margin: 10px 0;
-            padding: 10px 20px;
-        }
-    </style>
 </head>
 
 <body>
@@ -46,26 +17,7 @@
     <button id="download-jpg">Download as JPG</button>
     <button id="download-pdf">Download as PDF</button>
 
-    <script>
-        // Load card information to display
-        const cardInfo = JSON.parse(localStorage.getItem('cardInfo'));
-        const cardPreview = document.getElementById('card-preview');
-        if (cardInfo) {
-            cardPreview.style.backgroundColor = cardInfo.color;
-            cardPreview.innerHTML = `<h2>${cardInfo.name}</h2><p>${cardInfo.jobTitle}</p>`;
-        }
 
-        // Download functionality (placeholder)
-        document.getElementById('download-png').addEventListener('click', () => {
-            alert('Download as PNG is not implemented yet.');
-        });
-        document.getElementById('download-jpg').addEventListener('click', () => {
-            alert('Download as JPG is not implemented yet.');
-        });
-        document.getElementById('download-pdf').addEventListener('click', () => {
-            alert('Download as PDF is not implemented yet.');
-        });
-    </script>
 </body>
 
 </html>

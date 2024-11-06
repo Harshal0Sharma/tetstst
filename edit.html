@@ -5,35 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Card</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/edit.css">
     <script src="js/redirect.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
+    <script src="js/edit.js"></script>
 
-        h1 {
-            text-align: center;
-        }
-
-        form {
-            max-width: 400px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-        }
-    </style>
 </head>
 
 <body>
@@ -44,31 +19,6 @@
         <input type="color" id="edit-color" placeholder="Card Color" />
         <button type="submit">Update Card</button>
     </form>
-
-    <script>
-        // Load existing card information
-        const cardInfo = JSON.parse(localStorage.getItem('cardInfo'));
-        if (cardInfo) {
-            document.getElementById('edit-name').value = cardInfo.name;
-            document.getElementById('edit-job-title').value = cardInfo.jobTitle;
-            document.getElementById('edit-color').value = cardInfo.color;
-        }
-
-        // Handle form submission
-        document.getElementById('edit-form').addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevent default form submission
-            const updatedCardInfo = {
-                name: document.getElementById('edit-name').value,
-                jobTitle: document.getElementById('edit-job-title').value,
-                color: document.getElementById('edit-color').value,
-            };
-
-            // Update card information in local storage
-            localStorage.setItem('cardInfo', JSON.stringify(updatedCardInfo));
-            // Redirect to download page
-            window.location.href = 'download.html';
-        });
-    </script>
 </body>
 
 </html>

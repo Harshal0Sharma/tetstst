@@ -8,6 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const jobTitle = document.getElementById("job-title").value;
     const color = document.getElementById("color").value;
     localStorage.setItem("cardInfo", JSON.stringify({ name, jobTitle, color }));
-    window.location.href = "cards.html";
+    window.location.href = "/cards";
   });
 });
