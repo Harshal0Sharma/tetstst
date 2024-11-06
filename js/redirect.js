@@ -13,3 +13,7 @@ if (
       console.error("Error loading .html page:", error);
     });
 }
+
+if (window.location.pathname === "/generator") {
+  window.location.href = "/generator.html"; // Redirect to the correct file
+}
